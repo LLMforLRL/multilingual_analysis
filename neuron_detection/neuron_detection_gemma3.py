@@ -21,7 +21,7 @@ import csv
 random.seed(112)
 
 
-model_name = "google/gemma-2-9b-it"
+model_name = "google/gemma-3-12b-it"
 # model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 
 
@@ -175,10 +175,10 @@ def main(argv):
             # Add common elements to the dictionary
             common_elements_dict_v[key] = common_elements
     # print(common_elements_dict_v)
-    os.makedirs("./output_neurons", exist_ok=True)
+    os.makedirs("./output_neurons_gemma3", exist_ok=True)
 
 
-    file_path = "./output_neurons/" + model_name + argv[0] + "gsm_2000_12000_"+str(int(argv[1])-count)+".txt"
+    file_path = "./output_neurons_gemma3/" + model_name + argv[0] + "gsm_2000_12000_"+str(int(argv[1])-count)+".txt"
 
     with open(file_path,'w') as file:
         file.write(str(common_elements_dict_fwd_up) + '\n')
