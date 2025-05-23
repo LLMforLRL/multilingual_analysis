@@ -9,6 +9,8 @@
 #SBATCH --time=3-00:00:00
 #SBATCH --output=%x-%j.out
 
+# sometimes, the MILA cluster does not allow us to use gpus, wierd. 
+
 # --- modules ----------------------------------------------------------
 module load cuda/12.3.2
 # --- Conda ------------------------------------------------------------
